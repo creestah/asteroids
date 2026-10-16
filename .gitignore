@@ -17,6 +17,7 @@ wheels/
 .ruff_cache/
 .coverage
 htmlcov/
+game_state.jsonl
 
 # Local environment and editor files
 .env
