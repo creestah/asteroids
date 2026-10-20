@@ -1,6 +1,6 @@
 # Asteroids
 
-A Python project built with [Pygame](https://www.pygame.org/). The current entry point is a small starter program that prints the installed Pygame version; the game itself is not implemented yet.
+A Python project built with [Pygame](https://www.pygame.org/). In development; the game itself is not implemented yet.
 
 ## Requirements
 
