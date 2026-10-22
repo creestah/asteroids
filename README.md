@@ -1,6 +1,6 @@
 # Asteroids
 
-A Python project built with [Pygame](https://www.pygame.org/). In development; the game itself is not implemented yet.
+A Python implementation of Asteroids built with [Pygame](https://www.pygame.org/). The project is in development; the current program opens a game window and draws the player's ship at the center of the screen.
 
 ## Requirements
 
@@ -16,11 +16,15 @@ uv sync
 uv run python main.py
 ```
 
-You should see the Pygame version printed in the terminal.
+Use the window's close button to exit.
 
 ## Project files
 
 - `main.py` — application entry point
+- `player.py` — player ship shape and drawing
+- `circleshape.py` — shared base class for game objects
+- `constants.py` — screen and player dimensions
+- `logger.py` — logging helper
 - `pyproject.toml` — project metadata and dependencies
 - `uv.lock` — locked dependency versions
 - `.python-version` — preferred Python version for uv (3.13)
