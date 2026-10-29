@@ -9,17 +9,19 @@ def main():
     dt = 0.0
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     running = True
+
+    #Initiate player triangle
+    x = SCREEN_WIDTH / 2
+    y = SCREEN_HEIGHT / 2
+    player = Player(x, y)
+
     while running:
         log_state()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
         screen.fill("black")
-
-        #Initiate player triangle
-        x = SCREEN_WIDTH / 2
-        y = SCREEN_HEIGHT / 2
-        player = Player(x, y)
+        player.update(dt)
         player.draw(screen)
         
         pygame.display.flip()
