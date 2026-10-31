@@ -1,6 +1,6 @@
-# Asteroids
+# Asteroids - in development
 
-A Python implementation of Asteroids built with [Pygame](https://www.pygame.org/). The project is in development. The current program opens a game window with the player's ship at the center of the screen. You can rotate and move the ship around the window.
+A Python implementation of Asteroids built with [Pygame](https://www.pygame.org/). The current program opens a game window with the player's ship at the center of the screen. You can rotate and move the ship around the window.
 
 ## Controls
 
