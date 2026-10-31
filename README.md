@@ -1,7 +1,13 @@
 # Asteroids
 
-A Python implementation of Asteroids built with [Pygame](https://www.pygame.org/). The project is in development; the current program opens a game window and draws the player's ship at the center of the screen.
-The player can rotate the ship using A and D.
+A Python implementation of Asteroids built with [Pygame](https://www.pygame.org/). The project is in development. The current program opens a game window with the player's ship at the center of the screen. You can rotate and move the ship around the window.
+
+## Controls
+
+- **W** — move forward
+- **S** — move backward
+- **A** — rotate left
+- **D** — rotate right
 
 ## Requirements
 
@@ -24,7 +30,7 @@ Use the window's close button to exit.
 - `main.py` — application entry point
 - `player.py` — player ship shape, drawing, and controls
 - `circleshape.py` — shared base class for game objects
-- `constants.py` — screen and player dimensions
+- `constants.py` — screen dimensions and player movement settings
 - `logger.py` — logging helper
 - `pyproject.toml` — project metadata and dependencies
 - `uv.lock` — locked dependency versions
