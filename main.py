@@ -9,7 +9,12 @@ def main():
     dt = 0.0
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     running = True
-
+    updatable = pygame.sprite.Group()
+    drawable = pygame.sprite.Group()
+    Player.containers = (updatable, drawable)
+    updatable.update()
+    drawable.update()
+    
     #Initiate player triangle
     x = SCREEN_WIDTH / 2
     y = SCREEN_HEIGHT / 2
