@@ -1,6 +1,6 @@
 # Asteroids - in development
 
-A Python implementation of Asteroids built with [Pygame](https://www.pygame.org/). The current program opens a game window with the player's ship at the center of the screen. You can rotate and move the ship around the window.
+A Python implementation of Asteroids built with [Pygame](https://www.pygame.org/). The current program opens a game window with the player's ship at the center of the screen and spawns asteroids. You can rotate and move the ship around the window.
 
 ## Controls
 
@@ -29,6 +29,8 @@ Use the window's close button to exit.
 
 - `main.py` — application entry point
 - `player.py` — player ship shape, drawing, and controls
+- `asteroid.py` — asteroid movement and drawing
+- `asteroidfield.py` — asteroid spawning
 - `circleshape.py` — shared base class for game objects
 - `constants.py` — screen dimensions and player movement settings
 - `logger.py` — logging helper
