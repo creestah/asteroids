@@ -1,6 +1,6 @@
 # Asteroids - in development
 
-A Python implementation of Asteroids built with [Pygame](https://www.pygame.org/). The current program opens a game window with the player's ship at the center of the screen and spawns asteroids. You can rotate and move the ship around the window.
+A Python implementation of Asteroids built with [Pygame](https://www.pygame.org/). The current program opens a game window with the player's ship at the center and asteroids spawning from the edges. Move and rotate the ship to avoid them. A collision ends the game.
 
 ## Controls
 
@@ -23,7 +23,7 @@ uv sync
 uv run python main.py
 ```
 
-Use the window's close button to exit.
+Use the window's close button to exit. Game state snapshots and events are written to `game_state.jsonl` and `game_events.jsonl` in the project directory; these generated files are ignored by Git.
 
 ## Project files
 
@@ -33,7 +33,7 @@ Use the window's close button to exit.
 - `asteroidfield.py` — asteroid spawning
 - `circleshape.py` — shared base class for game objects
 - `constants.py` — screen dimensions and player movement settings
-- `logger.py` — logging helper
+- `logger.py` — game state and event logging
 - `pyproject.toml` — project metadata and dependencies
 - `uv.lock` — locked dependency versions
 - `.python-version` — preferred Python version for uv (3.13)
