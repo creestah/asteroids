@@ -18,6 +18,7 @@ wheels/
 .coverage
 htmlcov/
 game_state.jsonl
+game_events.jsonl
 
 # Local environment and editor files
 .env
