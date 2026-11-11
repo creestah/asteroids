@@ -1,13 +1,16 @@
-# Asteroids - in development
+# Asteroids
 
-A Python implementation of Asteroids built with [Pygame](https://www.pygame.org/). The current program opens a game window with the player's ship at the center and asteroids spawning from the edges. Move and rotate the ship to avoid them. A collision ends the game.
+A work-in-progress Asteroids game built with Python and [Pygame](https://www.pygame.org/). The player steers a ship, asteroids spawn from the edges of the window, and colliding with an asteroid ends the game. You can fire shots, though asteroid destruction and scoring are not implemented yet.
 
 ## Controls
 
-- **W** — move forward
-- **S** — move backward
-- **A** — rotate left
-- **D** — rotate right
+| Key | Action |
+| --- | --- |
+| W | Move forward |
+| S | Move backward |
+| A | Rotate left |
+| D | Rotate right |
+| Space | Fire shots |
 
 ## Requirements
 
@@ -16,24 +19,24 @@ A Python implementation of Asteroids built with [Pygame](https://www.pygame.org/
 
 ## Setup and run
 
-From the project directory, install the locked dependencies and run the program:
+From the project directory, install the locked dependencies and start the game:
 
 ```sh
 uv sync
 uv run python main.py
 ```
 
-Use the window's close button to exit. Game state snapshots and events are written to `game_state.jsonl` and `game_events.jsonl` in the project directory; these generated files are ignored by Git.
+Close the game window to exit. Game state snapshots and events are written to `game_state.jsonl` and `game_events.jsonl` in the project directory. These generated files are ignored by Git.
 
 ## Project files
 
-- `main.py` — application entry point
-- `player.py` — player ship shape, drawing, and controls
-- `asteroid.py` — asteroid movement and drawing
-- `asteroidfield.py` — asteroid spawning
-- `circleshape.py` — shared base class for game objects
-- `constants.py` — screen dimensions and player movement settings
+- `main.py` — initializes Pygame and runs the game loop
+- `player.py` — player ship movement, rotation, and shooting
+- `asteroid.py` — asteroid movement, drawing, and collision shape
+- `asteroidfield.py` — spawns asteroids at the window edges
+- `shot.py` — shot movement and drawing
+- `circleshape.py` — shared base class and circle collision checks
+- `constants.py` — window dimensions and gameplay settings
 - `logger.py` — game state and event logging
-- `pyproject.toml` — project metadata and dependencies
-- `uv.lock` — locked dependency versions
-- `.python-version` — preferred Python version for uv (3.13)
+- `pyproject.toml` and `uv.lock` — project metadata and locked dependencies
+- `.python-version` — preferred Python version for uv
