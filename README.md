@@ -1,4 +1,4 @@
-# Asteroids
+# .✦ ݁˖ Asteroids .✦ ݁˖ 
 
 A work-in-progress Asteroids game built with Python and [Pygame](https://www.pygame.org/). The player steers a ship, asteroids spawn from the edges of the window, and colliding with an asteroid ends the game. Fire shots to destroy asteroids. Scoring is not implemented yet.
 
