@@ -1,6 +1,6 @@
-# .✦ ݁˖ Asteroids .✦ ݁˖ 
+# .✦ ݁˖ Asteroids .✦ ݁˖
 
-A work-in-progress Asteroids game built with Python and [Pygame](https://www.pygame.org/). The player steers a ship while asteroids spawn from the edges of the window. A collision with the ship ends the game. Shooting a large asteroid splits it into smaller asteroids; the smallest asteroids disappear when hit. Scoring is not implemented yet.
+An Asteroids arcade game built with Python and [Pygame](https://www.pygame.org/). Pilot your ship, shoot incoming asteroids, and survive as long as you can. Large asteroids split into smaller ones when hit, and destroying a small asteroid adds to your score. Colliding with an asteroid ends the game.
 
 ## Controls
 
@@ -10,7 +10,8 @@ A work-in-progress Asteroids game built with Python and [Pygame](https://www.pyg
 | S | Move backward |
 | A | Rotate left |
 | D | Rotate right |
-| Space | Fire shots |
+| Space | Fire shots (hold to fire repeatedly) |
+| P | Pause or resume |
 
 ## Requirements
 
@@ -38,5 +39,6 @@ Close the game window to exit. Game state snapshots and events are written to `g
 - `circleshape.py` — shared base class and circle collision checks
 - `constants.py` — window dimensions and gameplay settings
 - `logger.py` — game state and event logging
+- `assets/SpaceMono-Regular.ttf` — display font
 - `pyproject.toml` and `uv.lock` — project metadata and locked dependencies
 - `.python-version` — preferred Python version for uv
