@@ -6,9 +6,10 @@ from asteroidfield import AsteroidField
 from asteroid import Asteroid
 from shot import Shot
 from pathlib import Path
+import asyncio
 
 
-def main():
+async def main():
     pygame.init()
     font_path = Path(__file__).parent / "assets" / "SpaceMono-Regular.ttf"
     font = pygame.font.Font(str(font_path), 24)
@@ -95,8 +96,9 @@ def main():
             screen.blit(pause_text, pause_text.get_rect(center=screen.get_rect().center))
         pygame.display.flip()
         dt = clock.tick(60) / 1000
+        await asyncio.sleep(0)
         
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())

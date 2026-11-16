@@ -5,7 +5,7 @@ __pycache__/
 # Virtual environments
 .venv/
 
-# Build and package artifacts
+# Build and package artifacts, including Pygbag web exports
 build/
 dist/
 wheels/
