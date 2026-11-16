@@ -1,6 +1,6 @@
 # .✦ ݁˖ Asteroids .✦ ݁˖ 
 
-A work-in-progress Asteroids game built with Python and [Pygame](https://www.pygame.org/). The player steers a ship, asteroids spawn from the edges of the window, and colliding with an asteroid ends the game. Fire shots to destroy asteroids. Scoring is not implemented yet.
+A work-in-progress Asteroids game built with Python and [Pygame](https://www.pygame.org/). The player steers a ship while asteroids spawn from the edges of the window. A collision with the ship ends the game. Shooting a large asteroid splits it into smaller asteroids; the smallest asteroids disappear when hit. Scoring is not implemented yet.
 
 ## Controls
 
@@ -32,7 +32,7 @@ Close the game window to exit. Game state snapshots and events are written to `g
 
 - `main.py` — initializes Pygame and runs the game loop
 - `player.py` — player ship movement, rotation, and shooting
-- `asteroid.py` — asteroid movement, drawing, and collision shape
+- `asteroid.py` — asteroid movement, drawing, and splitting when hit
 - `asteroidfield.py` — spawns asteroids at the window edges
 - `shot.py` — shot movement and drawing
 - `circleshape.py` — shared base class and circle collision checks
