@@ -2,7 +2,7 @@
 
 An Asteroids arcade game built with Python and [Pygame](https://www.pygame.org/). Pilot your ship, shoot incoming asteroids, and survive as long as you can. Large asteroids split into smaller ones when hit, and destroying a small asteroid adds to your score. Colliding with an asteroid ends the game.
 
-[Play Asteroids in your browser](https://creestah.itch.io/asteroids)
+[Play Asteroids in your browser!](https://creestah.itch.io/asteroids)
 
 ## Controls
 
