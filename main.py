@@ -44,6 +44,7 @@ def main():
     y = SCREEN_HEIGHT / 2
     player = Player(x, y)
     score = 0
+    paused = False
 
     while running:
         log_state()
@@ -57,24 +58,27 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+            if event.type == pygame.KEYDOWN and event.key == pygame.K_p:
+                paused = not paused
         screen.fill("black")
-        updatable.update(dt)
-        for asteroid in asteroids:
-            collision_check = asteroid.collides_with(player)
-            if collision_check:
-                log_event("player_hit")
-                print("Game over!")
-                sys.exit()
-        for asteroid in asteroids:
-            for shot in shots:
-                collision_check = asteroid.collides_with(shot)
+        if not paused:
+            updatable.update(dt)
+            for asteroid in asteroids:
+                collision_check = asteroid.collides_with(player)
                 if collision_check:
-                    log_event("asteroid_shot")
-                    if asteroid.split():
-                        score += 1
-                        explosions.append((asteroid.position.copy(), 0.35))
-                    shot.kill()
-        score_text = font.render(f"Asteroids destroyed: {score}", True, "white")
+                    log_event("player_hit")
+                    print("Game over!")
+                    sys.exit()
+            for asteroid in asteroids:
+                for shot in shots:
+                    collision_check = asteroid.collides_with(shot)
+                    if collision_check:
+                        log_event("asteroid_shot")
+                        if asteroid.split():
+                            score += 1
+                            explosions.append((asteroid.position.copy(), 0.35))
+                        shot.kill()
+        score_text = font.render(f"Asteroids destroyed: {score}", True, "green")
         screen.blit(score_text, (10, 10))
         for position, _ in explosions:
             top = position.y - len(explosion_art) * line_height / 2
@@ -86,6 +90,9 @@ def main():
                 screen.blit(image, rect)
         for obj in drawable:
             obj.draw(screen)
+        if paused:
+            pause_text = font.render("PAUSED - press P to resume", True, "white")
+            screen.blit(pause_text, pause_text.get_rect(center=screen.get_rect().center))
         pygame.display.flip()
         dt = clock.tick(60) / 1000
         
